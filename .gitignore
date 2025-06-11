@@ -6,8 +6,8 @@
 /tests/*.mem
 
 # Simulation output
-/cpu_sim
-/dump.vcd
+/*_sim
+/*.vcd
 /dump.fst
 /log.txt
 /sim_out/
