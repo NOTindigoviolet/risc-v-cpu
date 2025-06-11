@@ -26,8 +26,8 @@ module alu (
     assign is_zero = (result == 32'b0);
 
     // Less than flag logic for SLT and SLTU
-    assign is_less_than = (alu_op == 4'b0110) ? ($signed(operand_a) < $signed(operand_b)) :
-                          (alu_op == 4'b0111) ? (operand_a < operand_b) :
+    assign is_less_than = (alu_op == 4'b0110) ? ($signed(operand_a) < $signed(operand_b)) : // SLT
+                          (alu_op == 4'b0111) ? (operand_a < operand_b) :                   // SLTU
                           1'b0;
 
     // The main combinational block for ALU operations
@@ -66,6 +66,8 @@ module alu (
 
             // AND
             4'b0111: alu_result = operand_a & operand_b;
+
+            4'b1000: alu_result = operand_a; // Copy operand A (used for some instructions)
 
             default: alu_result = 32'hdeadbeef; // Default case
         endcase
