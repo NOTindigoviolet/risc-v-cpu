@@ -1,0 +1,41 @@
+# Compiled RISC-V binaries
+/tests/*.o
+/tests/*.elf
+/tests/*.bin
+/tests/*.hex
+/tests/*.mem
+
+# Simulation output
+/cpu_sim
+/dump.vcd
+/dump.fst
+/log.txt
+/sim_out/
+/work/ # Common for some simulators like QuestaSim/ModelSim
+
+# Synthesis output (if you use Yosys, Vivado, etc.)
+/synth_out/
+/build/
+*.json      # Yosys JSON output
+*.dot       # Graphviz output
+*.blif      # BLIF output
+*.v.synth   # Synthesized Verilog netlists
+*.rpt       # Reports (timing, area, power)
+
+# Editor/IDE specific files
+.vscode/    # VS Code settings (if not shared)
+.DS_Store   # macOS
+*~          # Linux backup files
+*.swp       # Vim swap files
+*.bak       # Backup files
+
+# Node.js/npm (if you're using xpm for toolchain management)
+/node_modules/
+/package-lock.json
+npm-debug.log*
+
+# Log files
+*.log
+
+# Design data dumps (if any)
+/tmp_data/
