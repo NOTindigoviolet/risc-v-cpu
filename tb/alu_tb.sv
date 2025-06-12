@@ -1,6 +1,6 @@
 /*******************************************************************************
 **
-** Testbench for the 32-bit RISC-V ALU
+** Testbench for the RV32I ALU
 **
 ** This testbench instantiates the ALU and drives its inputs with various
 ** test vectors to verify the functionality of each operation.

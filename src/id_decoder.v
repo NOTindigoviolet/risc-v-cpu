@@ -44,7 +44,7 @@ module id_decoder (
     localparam ALU_SRL_SRA = 4'b0101;
     localparam ALU_OR      = 4'b0110;
     localparam ALU_AND     = 4'b0111;
-    localparam ALU_COPY_A  = 4'b1000; // Pass operand A through
+    localparam ALU_COPY_A  = 4'b1000; 
 
     always @ (*) begin
         // --- Default Control Signal Values (safer state) ---
@@ -118,8 +118,7 @@ module id_decoder (
             7'b1100011: begin // B-type branch instructions
                 branch_en = 1'b1;
                 alu_src_b = 1'b0; // Compare rs1 and rs2
-                immediate = {{19{instruction[31]}}, instruction[31], instruction[7], instruction[30:25], instruction[11:8], 1'b0};
-
+                immediate = {{20{instruction[31]}}, instruction[7], instruction[30:25], instruction[11:8], 1'b0};
                 case (funct3)
                     3'b000: alu_op = ALU_ADD_SUB; // For BEQ/BNE (subtract to check for zero)
                     3'b001: alu_op = ALU_ADD_SUB; // For BEQ/BNE
@@ -137,7 +136,7 @@ module id_decoder (
                 alu_src_b    = 1'b1;
                 mem_to_reg   = 2'b10; // PC+4 to rd
                 alu_op       = ALU_ADD_SUB; // Add PC and immediate
-                immediate    = {{11{instruction[31]}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'b0};
+                immediate = {{12{instruction[31]}}, instruction[19:12], instruction[20], instruction[30:21], 1'b0};
             end
 
             7'b1100111: begin // JALR
