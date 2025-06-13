@@ -36,7 +36,8 @@ module alu_tb;
     );
 
     // Initial block to drive the test vectors
-    initial begin
+    initial 
+    begin
         // 1. Setup for VCD dump (for GTKWave)
         $dumpfile("alu_test.vcd");
         $dumpvars(0, alu_tb);

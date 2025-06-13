@@ -25,7 +25,8 @@ module imm_gen_tb;
     );
 
     // --- Main Test Sequence ---
-    initial begin
+    initial 
+    begin
         $dumpfile("imm_gen_tb.vcd");
         $dumpvars(0, imm_gen_tb);
         $monitor("Time=%0t | Instr=0x%h | Immediate=0x%h", $time, instruction, immediate);
