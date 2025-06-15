@@ -18,9 +18,9 @@ module pc_tb;
 
     pc uut (
         .clk(clk),
-        .reset(reset),
-        .pc_in(pc_in),
-        .pc_out(pc_out)
+        .rst(reset),
+        .pc_next(pc_in),
+        .pc_current(pc_out)
     );
 
     initial begin

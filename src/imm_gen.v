@@ -1,3 +1,6 @@
+`ifndef IMMEDIATE_GENERATOR_V
+`define IMMEDIATE_GENERATOR_V
+
 /*******************************************************************************
 **
 ** Behavioral Verilog for the immediate generator
@@ -67,3 +70,5 @@ module imm_gen (
     end
 
 endmodule
+
+`endif 

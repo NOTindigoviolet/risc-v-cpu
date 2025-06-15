@@ -1,3 +1,6 @@
+`ifndef CPU_TOP_V
+`define CPU_TOP_V
+
 /*******************************************************************************
 **
 ** Single-Cycle RISC-V CPU Top Module
@@ -63,7 +66,7 @@ module cpu_top (
     wire [31:0] jal_target_addr;
     wire [31:0] jalr_target_addr;
     wire [31:0] pc_target_jump;
-    wire        cond_branch_taken;
+    reg         cond_branch_taken;
 
     assign instruction = imem_data_in; 
 
@@ -171,3 +174,5 @@ module cpu_top (
     assign dmem_write_en   = id_mem_write_en; 
 
 endmodule
+
+`endif 

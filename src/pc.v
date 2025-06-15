@@ -1,3 +1,6 @@
+`ifndef PC_V
+`define PC_V
+
 /*******************************************************************************
 **
 ** Behavioral Verilog for the RV32I Program Counter (PC)
@@ -23,3 +26,5 @@ module pc (
         end
     end
 endmodule
+
+`endif 

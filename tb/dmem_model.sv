@@ -1,3 +1,6 @@
+`ifndef DMEM_MODEL_V
+`define DMEM_MODEL_V
+
 /*******************************************************************************
 **
 ** Data Memory Model
@@ -7,7 +10,7 @@
 **
 *******************************************************************************/
 
-module data_memory (
+module dmem_model (
     input  wire        clk,
     input  wire        read_en,      // Read enable signal (often always high)
     input  wire        write_en,     // Write enable signal
@@ -31,3 +34,5 @@ module data_memory (
     // it outputs the data at the specified address; otherwise, it outputs 'Z'.
     assign read_data_out = (read_en) ? memory[addr[31:2]] : 32'hZZZZZZZZ;
 endmodule
+
+`endif 

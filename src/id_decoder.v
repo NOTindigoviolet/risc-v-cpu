@@ -1,3 +1,6 @@
+`ifndef   ID_DECODER_V
+`define   ID_DECODER_V
+
 /*******************************************************************************
 **
 ** Behavioral Verilog for an instruction decoder
@@ -168,3 +171,5 @@ module id_decoder (
         endcase
     end
 endmodule
+
+`endif 

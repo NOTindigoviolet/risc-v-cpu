@@ -1,3 +1,6 @@
+`ifndef IMEM_MODEL_SV
+`define IMEM_MODEL_SV
+
 /*******************************************************************************
 **
 ** Instruction Memory Model
@@ -8,13 +11,10 @@
 *******************************************************************************/
 
 module imem_model (
-    input  wire        clk,
     input  wire [31:0] addr,
     output wire [31:0] instruction_out
 );
-    // Size of the memory in 32-bit words.
-    // e.g., 1024 words = 4096 bytes (4KB)
-    localparam MEM_DEPTH = 1024;
+    localparam MEM_DEPTH = 256; //1024
     // Name of the file containing the machine code in hex format.
     localparam MEM_FILE  = "program.hex";
 
@@ -33,3 +33,5 @@ module imem_model (
     assign instruction_out = memory[addr[31:2]];
 
 endmodule
+
+`endif

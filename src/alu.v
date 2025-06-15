@@ -1,3 +1,6 @@
+`ifndef ALU_V 
+`define ALU_V 
+
 /*******************************************************************************
 **
 ** Behavioral Verilog for a 32-bit RISC-V ALU
@@ -77,3 +80,5 @@ module alu (
     assign result = alu_result;
 
 endmodule
+
+`endif

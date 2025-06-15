@@ -1,3 +1,6 @@
+`ifndef REGFILE_V
+`define REGFILE_V
+
 /*******************************************************************************
 **
 ** Behavioral Verilog for the register file
@@ -47,3 +50,5 @@ module regfile (
     end
 
 endmodule
+
+`endif 
