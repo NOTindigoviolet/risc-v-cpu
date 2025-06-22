@@ -3,7 +3,7 @@
 
 /*******************************************************************************
 **
-** Instruction Fetch Stage
+** Writeback Stage
 **
 ** This module fetches instructions from instruction memory based on the current
 ** program counter (PC) and handles branching and jumping.
